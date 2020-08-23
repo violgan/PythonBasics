@@ -1,0 +1,132 @@
+##HW 3-4
+guests = ['Johnny Depp', 'Merlin Monro', 'Donald Trump', 'Michael Jackson']
+print(f"Welcome {guests[0]} to our home for dinner!")
+print(f"Welcome {guests[1]} to our home for dinner!")
+print(f"Welcome {guests[2]} to our home for dinner!")
+print(f"Welcome {guests[3]} to our home for dinner!")
+
+for guest in guests:
+    print(f"Welcome {guest} to our home!")
+##HW3-5
+guests_not_comming = [guests[3]]
+print(f"See you next time {guests_not_comming}")
+
+guests[3]='Melania Trump'
+print(f"Guests who comming: {guests}")
+print(f"{guests[0]} can't wait to meet you in our home!")
+print(f"{guests[1]} can't wait to meet you in our home!")
+print(f"{guests[2]} can't wait to meet you in our home!")
+print(f"{guests[3]} can't wait to meet you in our home!")
+
+##HW3-6
+guests.insert(0, 'David Guetta')
+guests.insert(2, 'Filipp Kirkorov')
+guests.append('Maria Kerry')
+print(f"Final guests: {guests}")
+print(f"We have now more space and {guests[0]} we are still waiting you for dinner!")
+print(f"We have now more space and {guests[1]} we are still waiting you for dinner!")
+print(f"We have now more space and {guests[2]} we are still waiting you for dinner!")
+print(f"We have now more space and {guests[3]} we are still waiting you for dinner!")
+print(f"We have now more space and {guests[4]} we are still waiting you for dinner!")
+print(f"We have now more space and {guests[5]} we are still waiting you for dinner!")
+print(f"We have now more space and {guests[6]} we are still waiting you for dinner!")
+
+
+##HW3-7
+guests_updated = guests
+guests_updated = list(guests)
+print(guests_updated)
+print(f"{guests_updated[6]} I'm so sorry but I can invite only two people for dinner. See you nex time!")
+guests_updated.pop()
+print(f"{guests_updated[5]} I'm so sorry but I can invite only two people for dinner. See you nex time!")
+guests_updated.pop()
+print(f"{guests_updated[4]} I'm so sorry but I can invite only two people for dinner. See you nex time!")
+guests_updated.pop()
+print(f"{guests_updated[3]} I'm so sorry but I can invite only two people for dinner. See you nex time!")
+guests_updated.pop()
+print(f"{guests_updated[2]} I'm so sorry but I can invite only two people for dinner. See you nex time!")
+guests_updated.pop()
+print(f"Guests list after pop: {guests_updated}")
+print(f"{guests_updated[0]} I can invite only two people but we are still waiting you for dinner!")
+print(f"{guests_updated[1]} I can invite only two people but we are still waiting you for dinner!")
+del guests_updated[1]
+del guests_updated[0]
+print(f"Guests who didn't receive message: {guests_updated}.")
+
+##HW3-8
+dream_places = ['Belarus', 'London', 'Bali', 'Australia', 'Italy']
+print(sorted(dream_places))
+print(f"Original dream_places list: {dream_places}")
+print(sorted (dream_places, reverse=True))
+print(f"dream_places after alphabetic reverse: {dream_places}")
+dream_places.reverse()
+print(f"Reverse dream_places list: {dream_places}")
+dream_places.reverse()
+print(f"Back to original dream_places: {dream_places}")
+dream_places.sort()
+print(f"dream_places in alphabetical order: {dream_places}")
+dream_places.sort(reverse=True)
+print(f"dream_places in DESC order: {dream_places}")
+
+##HW4-2
+pets=['dog', 'cat', 'rabbit']
+for pet in pets:
+    print(pet)
+for pet in pets:
+    print(f"A {pet} would make a great pet.")
+print('Any of these animals would make a great pet!')
+
+# ##HW4-6
+odd_list = []
+for num in range(1,21,2):
+    odd_list.append(num)
+print(odd_list)
+
+odd_numbers=[num for num in range(1, 21, 2)]
+print(odd_numbers)
+
+##HW4-7
+multiples3 = [num for num in range(3, 31, 3)]
+print(multiples3)
+
+mult3_list=[]
+for num in range (3, 31, 3):
+    mult3_list.append(num)
+print(mult3_list)
+
+##HW4-8
+cubes=[]
+for num in range(1, 11):
+    cubes.append(num**3)
+print(cubes)
+
+##HW4-9
+cubes_compr=[num**3 for num in range(1,11)]
+print(cubes_compr)
+
+cubes_compr2=list(num**3 for num in range (1,11))
+print(cubes_compr2)
+
+##HW4-10
+print(dream_places)
+print(f"The first three items in the list are: {dream_places[:3]}.")
+print(f"Three items from the middle of the list are: {dream_places[1:4]}.")
+print(f"The last three items in the list are: {dream_places[2:]}.")
+
+##HW4-11
+pizzas = ['Mozzarella', 'Regular', 'Pepperoni', 'Chicken buffulo']
+friends_pizzas=pizzas.copy()
+print(friends_pizzas)
+pizzas.append('Margarita')
+friends_pizzas.append('Cheese Roll')
+print(f"My favorite pizzas are:")
+for pizza in pizzas:
+    print(f"\t{pizza}")
+print(f"My friend’s favorite pizzas are:")
+for pizza in friends_pizzas:
+    print(f"\t{pizza}")
+
+##HW4-12
+#All versions of foods.py in this section have avoided using for loops
+#when printing to save space . Choose a version of foods.py, and write
+# two for loops to print each list of foods .
